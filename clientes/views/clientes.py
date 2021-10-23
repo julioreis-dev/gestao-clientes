@@ -15,6 +15,11 @@ from django.views.generic.edit import UpdateView
 from django.views.generic.edit import DeleteView
 from django.utils import timezone
 from django.urls import reverse_lazy
+from django.views.generic import TemplateView
+
+
+class IndexTemplateView(TemplateView):
+    template_name = 'base.html'
 
 
 @login_required

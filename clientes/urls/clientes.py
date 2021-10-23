@@ -11,8 +11,10 @@ from clientes.views.clientes import PersonUpdate
 from clientes.views.clientes import PersonDelete
 from clientes.views.clientes import api
 from clientes.views.clientes import APICBV
+from clientes.views.clientes import IndexTemplateView
 
 urlpatterns = [
+    path('', IndexTemplateView.as_view(), name="home"),
     path('list/', persons_list, name="person_list"),
     path('new/', persons_new, name="person_new"),
     path('update/<int:id>/', persons_update, name="persons_update"),
